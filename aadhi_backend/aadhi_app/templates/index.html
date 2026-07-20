@@ -1,0 +1,645 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AADHI Events &amp; Entertainments | Marathons, Corporate Wellness Runs &amp; Sports Events</title>
+<meta name="description" content="AADHI Events &amp; Entertainments organizes India's most exciting marathons, corporate wellness runs and sports events. Register now or become a sponsor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-track" viewBox="0 0 120 120">
+      <circle class="loader-track-bg" cx="60" cy="60" r="52"/>
+      <circle class="loader-track-fg" cx="60" cy="60" r="52"/>
+    </svg>
+    <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="loader-logo">
+    <div class="loader-tag">Creating Experiences That Inspire.</div>
+  </div>
+</div>
+
+<!-- Progress bar tied to scroll -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Navigation -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="nav-logo-img" width="1088" height="374" decoding="async" fetchpriority="high">
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#upcoming" class="nav-link" data-section="upcoming">Events</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="signin.html" class="btn btn-primary btn-sm ripple">Login</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero hero-video" id="home">
+    <div class="hero-video-wrap">
+      <div class="hero-slideshow" id="heroSlideshow">
+        <div class="hero-slide" data-bg="{% static 'media/completed-events/hero-amaravati.png' %}"></div>
+        <div class="hero-slide" data-bg="{% static 'media/completed-events/hero-telangana.png' %}"></div>
+        <div class="hero-slide" data-bg="{% static 'media/gallery/gallery-real-01.jpg' %}"></div>
+        <div class="hero-slide" data-bg="{% static 'media/gallery/gallery-real-08.jpg' %}"></div>
+        <div class="hero-slide" data-bg="{% static 'media/gallery/gallery-real-15.jpg' %}"></div>
+      </div>
+      <div class="hero-black-screen"></div>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-rays" aria-hidden="true"></div>
+      <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-grid">
+
+        <!-- LEFT: Live event card -->
+        <div class="hero-live-card slide-left" data-delay="1">
+          <span class="live-badge"><span class="live-dot"></span> Registrations Open</span>
+          <h3 class="hlc-title">Bengaluru Corporate Wellness Run 2026</h3>
+          <p class="hlc-tag">Run for a Healthy Life</p>
+
+          <div class="hlc-meta">
+            <div class="hlc-meta-item">
+              <svg viewBox="0 0 24 24"><path d="M7 2v2M17 2v2M3.5 8h17M4 5h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
+              <div><span class="hlc-label">Sunday</span><span class="hlc-value">15 November 2026</span></div>
+            </div>
+            <div class="hlc-meta-item">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <div><span class="hlc-label">NICE Road</span><span class="hlc-value">Bengaluru</span></div>
+            </div>
+          </div>
+
+          <p class="hlc-org">Organized by <strong>AADHI Events &amp; Entertainment</strong></p>
+
+          <div class="hlc-actions">
+            <a href="bengaluru-corporate-wellness-run.html" class="btn btn-primary full ripple reg-card-open" data-category="3 KM Fun Run" data-price-regular="₹1000" data-price-early="₹800">Register Now</a>
+            <a href="bengaluru-corporate-wellness-run.html" class="btn-outline-light full ripple">View Event Details</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Hero text -->
+        <div class="hero-content hero-content-right slide-right" data-delay="2">
+          <p class="eyebrow">AADHI Events &amp; Entertainments Presents</p>
+          <h1 class="hero-title" id="heroTitle">Creating Extraordinary Experiences <span class="text-gradient">That Inspire People</span></h1>
+          <p class="hero-desc">AADHI Events &amp; Entertainment specializes in premium corporate events, marathons, sports festivals and entertainment experiences designed to inspire healthier communities and unforgettable memories.</p>
+          <div class="hero-actions">
+            <a href="sponsor.html" class="btn btn-primary ripple">Become a Sponsor</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-media slide-left">
+          <div class="about-img-ph about-float" data-bg="{% static 'media/about-us.jpg' %}" role="img" aria-label="Aadhi Events & Entertainments — professional marathon event management"></div>
+        </div>
+        <div class="about-copy slide-right">
+          <p class="eyebrow">The Company</p>
+          <h2 class="section-title">About Aadhi Events &amp; Entertainments</h2>
+          <p class="section-lead" style="text-align:left;margin:0 0 16px;">Aadhi Events &amp; Entertainments is a leading event management company dedicated to creating memorable experiences through professionally organized sporting events, corporate wellness programs, marathons, entertainment shows, and community celebrations.</p>
+          <p style="color:#5b6b82;margin-bottom:16px;">With a passion for fitness and excellence, we bring together runners, families, corporates, fitness communities, and sponsors on one platform to inspire healthier lifestyles and stronger communities.</p>
+          <p style="color:#5b6b82;margin-bottom:26px;">Every event is planned with international standards, ensuring participant safety, seamless organization, engaging entertainment, and unforgettable memories.</p>
+
+          <h3 class="why-choose-title">Why Choose Us</h3>
+          <ul class="check-list">
+            <li>Professional Event Management</li>
+            <li>Experienced Organizing Team</li>
+            <li>International Quality Standards</li>
+            <li>Safety First Approach</li>
+            <li>Corporate Wellness Specialists</li>
+            <li>Thousands of Happy Participants</li>
+            <li>Trusted by Leading Brands</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING RUNNING EVENTS -->
+  <section class="section upcoming" id="upcoming">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Join The Movement</p>
+      <h2 class="section-title center reveal-up">Upcoming Events</h2>
+      <p class="section-lead center reveal-up">Pick an event near you and lace up for race day.</p>
+
+      <div class="completed-grid single-card">
+        <a href="bengaluru-corporate-wellness-run.html" class="completed-card-lg glass reveal-up hover-lift event-card-link">
+          <div class="event-img-ph completed-video-wrap">
+            <img class="completed-card-img" src="{% static 'media/bengaluru-corporate-wellness-run-card.jpg' %}" alt="Bengaluru Corporate Wellness Run 2026" loading="lazy">
+            <span class="completed-badge">Upcoming</span>
+          </div>
+          <div class="event-body">
+            <h3>Bengaluru Corporate Wellness Run 2026</h3>
+            <div class="event-meta"><span>📅 15 November 2026</span><span>📍 Bengaluru</span></div>
+            <p class="completed-desc">Choose your challenge — 3K Fun Run, 5K Timed Run or 10K Timed Run — and join Bengaluru's biggest corporate wellness event.</p>
+            <span class="btn btn-primary full ripple">Register</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLETED EVENTS -->
+  <section class="section completed" id="completed">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Our Track Record</p>
+      <h2 class="section-title center reveal-up">Completed Events</h2>
+      <p class="section-lead center reveal-up">Click a card to see the full event recap.</p>
+
+      <div class="completed-grid" id="completedGrid">
+        <!-- Completed event cards are rendered by script.js from the completedEvents array -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTICIPANT BENEFITS -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <p class="eyebrow center reveal-up">What You Get</p>
+      <h2 class="section-title center reveal-up">Participant Benefits</h2>
+
+      <div class="cards-grid five">
+        <div class="feature-card glass reveal-up hover-lift"><div class="feature-icon">👕</div><h3>Event T-Shirt</h3><p>Premium moisture-wicking marathon T-shirt.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="1"><div class="feature-icon">🎽</div><h3>Race Bib</h3><p>Official numbered race bib with timing support.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="2"><div class="feature-icon">🏅</div><h3>Finisher Medal</h3><p>Exclusive medal awarded to every finisher.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="3"><div class="feature-icon">📜</div><h3>Finisher Certificate</h3><p>Downloadable digital finisher certificate.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="4"><div class="feature-icon">🎁</div><h3>Goodie Bag</h3><p>Exciting gifts from our sponsors.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="5"><div class="feature-icon">🥣</div><h3>Breakfast</h3><p>Healthy breakfast after completing the race.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="6"><div class="feature-icon">🥤</div><h3>Refreshments</h3><p>Hydration stations throughout the course.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="7"><div class="feature-icon">🚑</div><h3>Medical Support</h3><p>Professional emergency medical assistance.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="8"><div class="feature-icon">📸</div><h3>Event Photos</h3><p>High-quality professional race photography.</p></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="9"><div class="feature-icon">💃</div><h3>Zumba Warm-up</h3><p>Energetic warm-up session before race start.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PARTICIPATE -->
+  <section class="section why-participate">
+    <div class="container">
+      <p class="eyebrow center reveal-up">The Experience</p>
+      <h2 class="section-title center reveal-up">Why Participate</h2>
+
+      <div class="cards-grid four">
+        <div class="feature-card glass reveal-up hover-lift"><div class="feature-icon">💪</div><h3>Improve Physical Fitness</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="1"><div class="feature-icon">🧠</div><h3>Boost Mental Well-being</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="2"><div class="feature-icon">🔥</div><h3>Challenge Yourself</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="3"><div class="feature-icon">🤝</div><h3>Meet Like-minded Runners</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="4"><div class="feature-icon">🏢</div><h3>Corporate Team Building</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="5"><div class="feature-icon">🌿</div><h3>Support Healthy Living</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="6"><div class="feature-icon">🏆</div><h3>Earn Recognition</h3></div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="7"><div class="feature-icon">📷</div><h3>Create Lifetime Memories</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZATION PROMO -->
+  <section class="section promo" id="promo">
+    <div class="container">
+      <div class="promo-split">
+        <div class="promo-media slide-left">
+          <div class="promo-img-ph promo-float" data-bg="{% static 'media/community-run.jpg' %}" role="img" aria-label="Thousands of runners taking part in an AADHI Events marathon"></div>
+          <div class="promo-badge">
+            <span class="promo-badge-icon">🏃</span>
+            <div>
+              <strong>2,700+</strong>
+              <span>Runners United</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="promo-copy slide-right">
+          <p class="eyebrow">Our Community In Motion</p>
+          <h2 class="section-title" style="text-align:left;">Powering India's Most Energetic Running Events</h2>
+          <p class="section-lead" style="text-align:left;margin:0 0 16px;">From the streets of Hyderabad to the heart of Andhra Pradesh and Bengaluru, AADHI Events &amp; Entertainments brings thousands of runners, walkers, and fitness enthusiasts together for professionally organized, safety-first marathons and wellness runs.</p>
+          <p style="color:#5b6b82;margin-bottom:26px;">Every route is marshalled, every runner is supported, and every finish line is a celebration — because we don't just organize events, we build a community that keeps moving forward.</p>
+
+          <div class="stats-grid promo-stats-grid">
+            <div class="stat-item reveal-up">
+              <span class="stat-num" data-target="2700" data-suffix="+">0</span>
+              <span class="stat-label">Runners United</span>
+            </div>
+            <div class="stat-item reveal-up" data-delay="1">
+              <span class="stat-num" data-target="3" data-suffix="+">0</span>
+              <span class="stat-label">Cities Covered</span>
+            </div>
+            <div class="stat-item reveal-up" data-delay="2">
+              <span class="stat-num" data-target="100" data-suffix="%">0</span>
+              <span class="stat-label">Safety-First Execution</span>
+            </div>
+          </div>
+
+          <div class="partner-actions" style="margin-top:28px;">
+            <a href="#upcoming" class="btn btn-primary ripple">Join Our Next Event</a>
+            <a href="#about" class="btn btn-outline ripple">More About Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="section highlights" id="highlights">
+    <div class="container">
+      <p class="eyebrow center reveal-up">What's Included</p>
+      <h2 class="section-title center reveal-up">What's Included</h2>
+
+      <div class="timeline-track">
+        <div class="timeline-item reveal-up hover-lift"><div class="t-icon">⏱</div><span>Professional Timing System</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="1"><div class="t-icon">🌳</div><span>Scenic Running Route</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="2"><div class="t-icon">💧</div><span>Hydration Points</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="3"><div class="t-icon">⛑</div><span>Medical Support</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="4"><div class="t-icon">📷</div><span>Photography Team</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="5"><div class="t-icon">🎉</div><span>Entertainment Zone</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="6"><div class="t-icon">🍽</div><span>Food Court</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="7"><div class="t-icon">🎧</div><span>Live Music</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="8"><div class="t-icon">🧒</div><span>Kids Activity Area</span></div>
+        <div class="timeline-item reveal-up hover-lift" data-delay="9"><div class="t-icon">🏆</div><span>Awards Ceremony</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPORATE BOOKINGS & PARTNERSHIPS -->
+  <section class="section partnerships" id="partnerships">
+    <div class="container">
+      <div class="partner-split">
+        <div class="partner-copy slide-left">
+          <p class="eyebrow">For Sponsors &amp; Partners</p>
+          <h2 class="section-title" style="text-align:left;">Partner With Us</h2>
+          <p class="section-lead" style="text-align:left;margin:0 0 14px;">Promote your brand to thousands of runners, fitness enthusiasts, families, and corporate professionals.</p>
+          <p style="color:#5b6b82;margin-bottom:26px;">Partner with Aadhi Events &amp; Entertainments to showcase your business through one of the region's most engaging sporting events.</p>
+
+          <div class="partner-actions">
+            <a href="sponsor.html" class="btn btn-primary ripple">Become a Sponsor</a>
+          </div>
+        </div>
+
+        <div class="partner-benefits slide-right">
+          <h3 class="why-choose-title">Partnership Benefits</h3>
+          <ul class="check-list two-col">
+            <li>Logo Visibility</li>
+            <li>Stage Branding</li>
+            <li>Digital Promotions</li>
+            <li>Social Media Exposure</li>
+            <li>Event Stall Space</li>
+            <li>Employee Wellness Programs</li>
+            <li>Product Sampling</li>
+            <li>Media Coverage</li>
+            <li>Corporate Team Registration</li>
+            <li>Dedicated Brand Activations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT HIGHLIGHTS PHOTO SLIDER -->
+  <section class="section event-highlights" id="event-highlights">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Moments That Matter</p>
+      <h2 class="section-title center reveal-up">Event Highlights</h2>
+
+      <div class="highlights-slider-wrap reveal-up">
+        <div class="highlights-slider" id="highlightsSlider"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED PARTNERS -->
+  <section class="section trusted-partners" id="trusted-partners">
+    <div class="tp-bg-shape" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow center">Who Backs Us</p>
+      <h2 class="section-title center">Trusted Partners</h2>
+      <p class="section-lead center">Brands and organisations that stand with Aadhi Events &amp; Entertainments in building a healthier, more active community.</p>
+
+      <div class="tp-grid">
+        <div class="tp-card" style="--tp-a:#0099E6;--tp-b:#00C2FF;">
+          <div class="tp-badge"><span>UF</span></div>
+          <h4 class="tp-name">Urban Fitness Co.</h4>
+          <span class="tp-tag">Fitness Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#0A4E92;--tp-b:#0099E6;">
+          <div class="tp-badge"><span>VH</span></div>
+          <h4 class="tp-name">Vitality Health Group</h4>
+          <span class="tp-tag">Healthcare Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#00C2FF;--tp-b:#0A4E92;">
+          <div class="tp-badge"><span>SB</span></div>
+          <h4 class="tp-name">Skyline Bank</h4>
+          <span class="tp-tag">Banking Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#0099E6;--tp-b:#0A4E92;">
+          <div class="tp-badge"><span>MS</span></div>
+          <h4 class="tp-name">Metro Sports Network</h4>
+          <span class="tp-tag">Media Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#00C2FF;--tp-b:#0099E6;">
+          <div class="tp-badge"><span>AP</span></div>
+          <h4 class="tp-name">AquaPure Hydration</h4>
+          <span class="tp-tag">Hydration Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#0A4E92;--tp-b:#00C2FF;">
+          <div class="tp-badge"><span>SW</span></div>
+          <h4 class="tp-name">StrideWear Apparel</h4>
+          <span class="tp-tag">Apparel Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#0099E6;--tp-b:#0A4E92;">
+          <div class="tp-badge"><span>SL</span></div>
+          <h4 class="tp-name">SwiftLine Logistics</h4>
+          <span class="tp-tag">Logistics Partner</span>
+        </div>
+
+        <div class="tp-card" style="--tp-a:#0A4E92;--tp-b:#00C2FF;">
+          <div class="tp-badge"><span>NT</span></div>
+          <h4 class="tp-name">NimbusTech Solutions</h4>
+          <span class="tp-tag">Technology Partner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Moments</p>
+      <h2 class="section-title center reveal-up">Gallery</h2>
+
+      <div class="masonry" id="masonryGrid"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Voices From The Run</p>
+      <h2 class="section-title center reveal-up">Testimonials</h2>
+
+      <div class="testimonial-slider reveal-up" id="testimonialSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card glass">
+            <div class="t-rating">★★★★★</div>
+            <p>"One of the best organized marathon events I have participated in. Everything from registration to the finish line was perfectly managed."</p>
+            <div class="t-person"><strong>Rahul Sharma</strong><span>Runner</span></div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="t-rating">★★★★★</div>
+            <p>"Amazing atmosphere, excellent volunteers, and a fantastic race experience from start to finish."</p>
+            <div class="t-person"><strong>Sneha Reddy</strong><span>Runner</span></div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="t-rating">★★★★★</div>
+            <p>"Our entire corporate team loved the event. Looking forward to participating again next year."</p>
+            <div class="t-person"><strong>Infosys Corporate Team</strong><span>Corporate Partner</span></div>
+          </div>
+
+        </div>
+        <div class="slider-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="container container-narrow">
+      <p class="eyebrow center reveal-up">Need To Know</p>
+      <h2 class="section-title center reveal-up">Frequently Asked Questions</h2>
+
+      <div class="accordion reveal-up" id="accordion">
+        <div class="acc-item">
+          <button class="acc-head">How can I register?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Choose your event and category, then fill in the registration form on the Contact section and complete payment online.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Can beginners participate?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Absolutely. Our fun run categories are designed for beginners, while our timed runs suit more experienced athletes.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Will I receive a medal?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Yes, every finisher across all categories receives an exclusive finisher medal along with a digital certificate.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Are refreshments provided?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Yes, hydration stations are placed throughout the course and refreshments are served at the finish line.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">How do I download my certificate?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>A link to your downloadable digital finisher certificate will be emailed to you within a few days of the event.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Is medical support available?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Yes, professional emergency medical assistance is available on-site throughout every event.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Can companies register teams?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Yes, corporate teams of any size can register together and will be grouped under their company name on race day.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">What is the refund policy?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Registration fees are non-refundable but fully transferable to another participant up to 7 days before the event.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Get In Touch</p>
+      <h2 class="section-title center reveal-up">Contact Aadhi Events &amp; Entertainments</h2>
+
+      <div class="contact-split">
+        <div class="contact-map reveal-up">
+          <div class="map-placeholder glass hover-lift">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Google Map — Bengaluru</span>
+          </div>
+
+          <div class="contact-details glass hover-lift">
+            <h3>Aadhi Events &amp; Entertainments</h3>
+            <p>📍 Bengaluru</p>
+            <p>✉ aadhieventsentertainment@gmail.com</p>
+            <div class="contact-btn-row">
+              <a href="mailto:aadhieventsentertainment@gmail.com" class="btn btn-outline ripple">Email Us</a>
+              <a href="#upcoming" class="btn btn-primary ripple">Register Today</a>
+              <a href="sponsor.html" class="btn btn-outline ripple">Become a sponsor</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal-up" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+            <span class="form-error" data-for="name"></span>
+          </div>
+          <div class="form-row">
+            <label for="cf-phone">Phone</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="10-digit mobile number" required>
+            <span class="form-error" data-for="phone"></span>
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+            <span class="form-error" data-for="email"></span>
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" placeholder="Tell us how we can help" required></textarea>
+            <span class="form-error" data-for="message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary full ripple">Send Message</button>
+          <p class="form-success" id="formSuccess" role="status">Thanks — your message has been sent. Our team will get back to you shortly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid four">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo footer-logo">
+        <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="nav-logo-img">
+      </a>
+      <p>Aadhi Events &amp; Entertainments organizes premium marathon events, corporate wellness runs, sports events, and entertainment experiences designed to inspire healthier communities.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#upcoming">Upcoming Events</a>
+      <a href="#completed">Completed Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="sponsor.html">Sponsors</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a href="#upcoming">Marathon Events</a>
+      <a href="#upcoming">Corporate Wellness Runs</a>
+      <a href="#highlights">Sports Events</a>
+      <a href="#gallery">Entertainment Events</a>
+      <a href="sponsor.html">Corporate Bookings</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Contact</h4>
+      <p class="footer-contact-line">📧 aadhieventsentertainment@gmail.com</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook" class="social-icon">f</a>
+        <a href="#" aria-label="Instagram" class="social-icon">ig</a>
+        <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+        <a href="#" aria-label="YouTube" class="social-icon">yt</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Aadhi Events &amp; Entertainments. All Rights Reserved.</div>
+</footer>
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+  <div class="lightbox-inner" id="lightboxInner"></div>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+  <p class="lightbox-caption" id="lightboxCaption"></p>
+</div>
+
+<!-- Registration Modal -->
+<div class="reg-modal" id="regModal" aria-hidden="true">
+  <div class="reg-modal-card glass" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
+    <button class="reg-modal-close" id="regModalClose" aria-label="Close registration form">✕</button>
+
+    <div class="reg-modal-summary">
+      <span class="reg-modal-eyebrow">Bengaluru Corporate Wellness Run 2026</span>
+      <h3 id="regModalTitle">3 KM Fun Run</h3>
+      <div class="reg-modal-price">
+        <span class="reg-modal-price-regular" id="regModalPriceRegular">Regular ₹1000</span>
+        <span class="reg-modal-price-early" id="regModalPriceEarly">₹800 <small>Early Bird</small></span>
+      </div>
+    </div>
+
+    <div class="reg-toggle-group" id="regToggleGroup" role="tablist" aria-label="Choose race category">
+      <button type="button" class="reg-toggle-btn" role="tab" data-category="3 KM Fun Run" data-price-regular="₹1000" data-price-early="₹800">
+        <span class="reg-toggle-label">3 KM</span><span class="reg-toggle-amount">₹800</span>
+      </button>
+      <button type="button" class="reg-toggle-btn" role="tab" data-category="5 KM Timed Run" data-price-regular="₹1200" data-price-early="₹1000">
+        <span class="reg-toggle-label">5 KM</span><span class="reg-toggle-amount">₹1000</span>
+      </button>
+      <button type="button" class="reg-toggle-btn" role="tab" data-category="10 KM Timed Run" data-price-regular="₹1500" data-price-early="₹1200">
+        <span class="reg-toggle-label">10 KM</span><span class="reg-toggle-amount">₹1200</span>
+      </button>
+    </div>
+
+    <form class="auth-form reg-modal-form" id="regModalForm" novalidate>
+      <div class="form-row">
+        <label for="reg-name">Full name</label>
+        <input type="text" id="reg-name" name="name" placeholder="Your full name" required>
+        <span class="form-error" data-for="name"></span>
+      </div>
+      <div class="form-row">
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" name="email" placeholder="you@example.com" required>
+        <span class="form-error" data-for="email"></span>
+      </div>
+      <div class="form-row">
+        <label for="reg-phone">Phone number</label>
+        <input type="tel" id="reg-phone" name="phone" placeholder="10-digit mobile number" required>
+        <span class="form-error" data-for="phone"></span>
+      </div>
+      <div class="form-row">
+        <label for="reg-address">Address</label>
+        <textarea id="reg-address" name="address" rows="3" placeholder="House no, street, city, state, PIN" required></textarea>
+        <span class="form-error" data-for="address"></span>
+      </div>
+
+      <button class="btn btn-primary full ripple reg-pay-btn" type="submit">Register & Pay</button>
+      <p class="form-success" id="regFormSuccess" role="status">🎉 Registration successful! A confirmation has been sent to your email.</p>
+    </form>
+  </div>
+</div>
+
+<script src="{% static 'aadhi-api.js' %}"></script>
+<script src="{% static 'script.js' %}"></script>
+<script src="{% static 'payment.js' %}"></script>
+</body>
+</html>

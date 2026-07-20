@@ -1,0 +1,561 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a Sponsor | AADHI Events &amp; Entertainments</title>
+<meta name="description" content="Partner with AADHI Events &amp; Entertainments to showcase your brand, engage thousands of participants, and create unforgettable experiences through premium sponsorship opportunities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'media/aadhi-logo-nav.png' %}">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-track" viewBox="0 0 120 120">
+      <circle class="loader-track-bg" cx="60" cy="60" r="52"/>
+      <circle class="loader-track-fg" cx="60" cy="60" r="52"/>
+    </svg>
+    <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="loader-logo">
+    <div class="loader-tag">Creating Experiences That Inspire.</div>
+  </div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Navigation -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-logo">
+      <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="nav-logo-img" width="1088" height="374" decoding="async" fetchpriority="high">
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#upcoming" class="nav-link">Events</a>
+      <a href="sponsor.html" class="nav-link spons-nav-cta active">Become a Sponsor</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="signin.html" class="btn btn-primary btn-sm ripple">Login</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="spons-hero" data-bg="{% static 'media/community-run.jpg' %}">
+    <div class="spons-hero-overlay"></div>
+    <div class="spons-hero-content">
+      <span class="status-pill reveal-up">Sponsorship Opportunities</span>
+      <h1 class="spons-hero-title reveal-up" data-delay="1">Become a Sponsor</h1>
+      <p class="spons-hero-sub reveal-up" data-delay="2">Partner with AADHI Events &amp; Entertainments to showcase your brand, engage thousands of participants, and create unforgettable experiences through premium sponsorship opportunities.</p>
+      <div class="spons-hero-actions reveal-up" data-delay="3">
+        <a href="#packages" class="btn btn-primary ripple">View Sponsorship Packages</a>
+        <a href="#sponsor-form" class="btn btn-outline ripple">Submit Sponsorship Request</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY SPONSOR WITH US -->
+  <section class="section" id="why-sponsor">
+    <div class="container">
+      <p class="eyebrow center reveal-up">The Value</p>
+      <h2 class="section-title center reveal-up">Why Sponsor With Us</h2>
+      <p class="section-lead center reveal-up">Every AADHI event is built to put your brand in front of the people who matter most — engaged, active, and community-minded audiences.</p>
+
+      <div class="cards-grid">
+        <div class="feature-card glass reveal-up hover-lift">
+          <div class="feature-icon spons-icon">🏷️</div>
+          <h3>Brand Visibility</h3>
+          <p>Display your logo across event banners, digital media, websites, social media, and promotional campaigns.</p>
+        </div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="1">
+          <div class="feature-icon spons-icon">👥</div>
+          <h3>Massive Audience Reach</h3>
+          <p>Reach thousands of participants, spectators, families, and business professionals.</p>
+        </div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="2">
+          <div class="feature-icon spons-icon">🏢</div>
+          <h3>Corporate Branding</h3>
+          <p>Strengthen your company's public image through meaningful community events.</p>
+        </div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="3">
+          <div class="feature-icon spons-icon">🤝</div>
+          <h3>Networking</h3>
+          <p>Connect with government officials, business leaders, fitness communities, educational institutions, and industry experts.</p>
+        </div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="4">
+          <div class="feature-icon spons-icon">📰</div>
+          <h3>Media Coverage</h3>
+          <p>Gain visibility through newspapers, TV channels, YouTube, Instagram, Facebook, LinkedIn, and event photography.</p>
+        </div>
+        <div class="feature-card glass reveal-up hover-lift" data-delay="5">
+          <div class="feature-icon spons-icon">🌱</div>
+          <h3>CSR Opportunities</h3>
+          <p>Support health, education, sports, and social awareness initiatives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORSHIP CATEGORIES -->
+  <section class="section categories" id="packages">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Packages</p>
+      <h2 class="section-title center reveal-up">Choose Your Sponsorship Category</h2>
+      <p class="section-lead center reveal-up">From headline branding to community recognition, pick the tier that fits your goals — or talk to us about a custom package.</p>
+
+      <div class="pricing-grid four">
+
+        <div class="price-card tier-title glass reveal-up hover-lift">
+          <div class="badge">Best Value</div>
+          <div class="price-tier-icon">🥇</div>
+          <h3>Title Sponsor</h3>
+          <span class="price-tagline">Headline Partner</span>
+          <ul class="check-list">
+            <li>Logo on Main Stage</li>
+            <li>Event Naming Rights</li>
+            <li>Premium Branding</li>
+            <li>Press Coverage</li>
+            <li>Social Media Promotions</li>
+            <li>VIP Access</li>
+          </ul>
+          <a href="#sponsor-form" class="btn btn-accent full ripple spons-pick-btn" data-category="title">Become Title Sponsor</a>
+        </div>
+
+        <div class="price-card tier-gold glass reveal-up hover-lift" data-delay="1">
+          <div class="price-tier-icon">🥈</div>
+          <h3>Gold Sponsor</h3>
+          <span class="price-tagline">Premium Partner</span>
+          <ul class="check-list">
+            <li>Large Logo Placement</li>
+            <li>Banner Branding</li>
+            <li>Social Media Promotions</li>
+            <li>VIP Passes</li>
+          </ul>
+          <a href="#sponsor-form" class="btn btn-outline full ripple spons-pick-btn" data-category="gold">Become Gold Sponsor</a>
+        </div>
+
+        <div class="price-card tier-silver glass reveal-up hover-lift" data-delay="2">
+          <div class="price-tier-icon">🥉</div>
+          <h3>Silver Sponsor</h3>
+          <span class="price-tagline">Growth Partner</span>
+          <ul class="check-list">
+            <li>Logo Display</li>
+            <li>Website Listing</li>
+            <li>Booth Space</li>
+          </ul>
+          <a href="#sponsor-form" class="btn btn-outline full ripple spons-pick-btn" data-category="silver">Become Silver Sponsor</a>
+        </div>
+
+        <div class="price-card tier-bronze glass reveal-up hover-lift" data-delay="3">
+          <div class="price-tier-icon">🏅</div>
+          <h3>Bronze Sponsor</h3>
+          <span class="price-tagline">Community Partner</span>
+          <ul class="check-list">
+            <li>Event Recognition</li>
+            <li>Website Listing</li>
+            <li>Participation Certificate</li>
+          </ul>
+          <a href="#sponsor-form" class="btn btn-outline full ripple spons-pick-btn" data-category="bronze">Become Bronze Sponsor</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR BENEFITS TIMELINE -->
+  <section class="section" style="background:var(--white);" id="process">
+    <div class="container container-narrow">
+      <p class="eyebrow center reveal-up">How It Works</p>
+      <h2 class="section-title center reveal-up">Sponsor Benefits Timeline</h2>
+
+      <div class="spons-steps">
+        <div class="spons-step reveal-up">
+          <div class="spons-step-num">1</div>
+          <div class="spons-step-body">
+            <h3>Submit Application</h3>
+            <p>Fill out the sponsorship request form below with your company and partnership details.</p>
+          </div>
+        </div>
+        <div class="spons-step reveal-up" data-delay="1">
+          <div class="spons-step-num">2</div>
+          <div class="spons-step-body">
+            <h3>Our Team Reviews</h3>
+            <p>The AADHI partnerships team reviews your application and matches it to the right opportunity.</p>
+          </div>
+        </div>
+        <div class="spons-step reveal-up" data-delay="2">
+          <div class="spons-step-num">3</div>
+          <div class="spons-step-body">
+            <h3>Discussion Meeting</h3>
+            <p>We connect with you to discuss goals, branding needs, and available packages in detail.</p>
+          </div>
+        </div>
+        <div class="spons-step reveal-up" data-delay="3">
+          <div class="spons-step-num">4</div>
+          <div class="spons-step-body">
+            <h3>Package Confirmation</h3>
+            <p>Finalize your sponsorship tier and the deliverables that come with it.</p>
+          </div>
+        </div>
+        <div class="spons-step reveal-up" data-delay="4">
+          <div class="spons-step-num">5</div>
+          <div class="spons-step-body">
+            <h3>Payment &amp; Agreement</h3>
+            <p>Complete the sponsorship agreement and payment to lock in your partnership.</p>
+          </div>
+        </div>
+        <div class="spons-step reveal-up" data-delay="5">
+          <div class="spons-step-num">6</div>
+          <div class="spons-step-body">
+            <h3>Official Sponsor Announcement</h3>
+            <p>Your brand goes live across our event branding, digital media, and promotional channels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BECOME A SPONSOR FORM -->
+  <section class="section" id="sponsor-form">
+    <div class="container container-narrow">
+      <p class="eyebrow center reveal-up">Get Started</p>
+      <h2 class="section-title center reveal-up">Become a Sponsor</h2>
+      <p class="section-lead center reveal-up">Tell us about your company and sponsorship goals — our partnerships team will get back to you shortly.</p>
+
+      {% if messages %}
+        {% for message in messages %}
+          <p class="form-note form-note-banner {% if message.tags == 'success' %}form-note-success{% else %}form-note-error{% endif %}">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+
+      <form class="spons-form-card glass reveal-up" id="sponsorForm" method="post" action="{% url 'sponsor' %}" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+
+        <div class="spons-form-grid">
+
+          <div class="form-row">
+            <label for="id_company_name">Company Name *</label>
+            <input type="text" id="id_company_name" name="company_name" placeholder="Your company name" value="{{ form.company_name.value|default_if_none:'' }}" required>
+            <span class="form-error">{{ form.company_name.errors.0 }}</span>
+          </div>
+
+          <div class="form-row">
+            <label for="id_contact_person">Contact Person *</label>
+            <input type="text" id="id_contact_person" name="contact_person" placeholder="Full name" value="{{ form.contact_person.value|default_if_none:'' }}" required>
+            <span class="form-error">{{ form.contact_person.errors.0 }}</span>
+          </div>
+
+          <div class="form-row">
+            <label for="id_designation">Designation *</label>
+            <input type="text" id="id_designation" name="designation" placeholder="e.g. Marketing Head" value="{{ form.designation.value|default_if_none:'' }}" required>
+            <span class="form-error">{{ form.designation.errors.0 }}</span>
+          </div>
+
+          <div class="form-row">
+            <label for="id_business_email">Business Email *</label>
+            <input type="email" id="id_business_email" name="business_email" placeholder="you@company.com" value="{{ form.business_email.value|default_if_none:'' }}" required>
+            <span class="form-error">{{ form.business_email.errors.0 }}</span>
+          </div>
+
+          <div class="form-row">
+            <label for="id_mobile_number">Mobile Number *</label>
+            <input type="tel" id="id_mobile_number" name="mobile_number" placeholder="10-digit mobile number" value="{{ form.mobile_number.value|default_if_none:'' }}" required>
+            <span class="form-error">{{ form.mobile_number.errors.0 }}</span>
+          </div>
+
+          <div class="form-row">
+            <label for="id_website">Website</label>
+            <input type="url" id="id_website" name="website" placeholder="https://yourcompany.com" value="{{ form.website.value|default_if_none:'' }}">
+            <span class="form-error">{{ form.website.errors.0 }}</span>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_company_address">Company Address</label>
+            <textarea id="id_company_address" name="company_address" rows="2" placeholder="Street, area">{{ form.company_address.value|default_if_none:'' }}</textarea>
+            <span class="form-error">{{ form.company_address.errors.0 }}</span>
+          </div>
+
+          <div class="form-row">
+            <label for="id_city">City</label>
+            <input type="text" id="id_city" name="city" placeholder="City" value="{{ form.city.value|default_if_none:'' }}">
+          </div>
+
+          <div class="form-row">
+            <label for="id_state">State</label>
+            <input type="text" id="id_state" name="state" placeholder="State" value="{{ form.state.value|default_if_none:'' }}">
+          </div>
+
+          <div class="form-row">
+            <label for="id_country">Country</label>
+            <input type="text" id="id_country" name="country" placeholder="Country" value="{{ form.country.value|default_if_none:'India' }}">
+          </div>
+
+          <div class="form-row">
+            <label for="id_industry_type">Industry Type</label>
+            <select id="id_industry_type" name="industry_type">
+              <option value="">Select industry</option>
+              {% for value, label in form.fields.industry_type.choices %}
+                {% if value %}<option value="{{ value }}" {% if form.industry_type.value == value %}selected{% endif %}>{{ label }}</option>{% endif %}
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="id_sponsorship_category">Sponsorship Category</label>
+            <select id="id_sponsorship_category" name="sponsorship_category">
+              <option value="">Select category</option>
+              {% for value, label in form.fields.sponsorship_category.choices %}
+                {% if value %}<option value="{{ value }}" {% if form.sponsorship_category.value == value %}selected{% endif %}>{{ label }}</option>{% endif %}
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="id_budget_range">Budget Range</label>
+            <select id="id_budget_range" name="budget_range">
+              <option value="">Select budget range</option>
+              {% for value, label in form.fields.budget_range.choices %}
+                {% if value %}<option value="{{ value }}" {% if form.budget_range.value == value %}selected{% endif %}>{{ label }}</option>{% endif %}
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-row form-row-full">
+            <span class="spons-fieldset-label">Event(s) Interested In</span>
+            <div class="chk-chip-group">
+              {% for value, label in form.fields.events_interested.choices %}
+                <label class="chk-chip">
+                  <input type="checkbox" name="events_interested" value="{{ value }}" {% if value in selected_events %}checked{% endif %}>
+                  <span>{{ label }}</span>
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_company_description">Company Description</label>
+            <textarea id="id_company_description" name="company_description" rows="3" placeholder="Tell us a little about your company">{{ form.company_description.value|default_if_none:'' }}</textarea>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_marketing_objectives">Marketing Objectives</label>
+            <textarea id="id_marketing_objectives" name="marketing_objectives" rows="3" placeholder="What do you want to achieve through this sponsorship?">{{ form.marketing_objectives.value|default_if_none:'' }}</textarea>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_additional_requirements">Additional Requirements</label>
+            <textarea id="id_additional_requirements" name="additional_requirements" rows="3" placeholder="Anything else we should know?">{{ form.additional_requirements.value|default_if_none:'' }}</textarea>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_company_logo">Upload Company Logo</label>
+            <div class="file-upload-row">
+              <label class="file-upload-btn" for="id_company_logo">Choose File</label>
+              <input type="file" id="id_company_logo" name="company_logo" accept="image/*">
+              <span class="file-upload-filename">No file chosen</span>
+            </div>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_company_brochure">Upload Company Brochure</label>
+            <div class="file-upload-row">
+              <label class="file-upload-btn" for="id_company_brochure">Choose File</label>
+              <input type="file" id="id_company_brochure" name="company_brochure" accept=".pdf,.doc,.docx">
+              <span class="file-upload-filename">No file chosen</span>
+            </div>
+          </div>
+
+          <div class="form-row form-row-full">
+            <label for="id_sponsorship_proposal">Upload Sponsorship Proposal</label>
+            <div class="file-upload-row">
+              <label class="file-upload-btn" for="id_sponsorship_proposal">Choose File</label>
+              <input type="file" id="id_sponsorship_proposal" name="sponsorship_proposal" accept=".pdf,.doc,.docx">
+              <span class="file-upload-filename">No file chosen</span>
+            </div>
+          </div>
+
+          <div class="form-row-full agree-row">
+            <input type="checkbox" id="id_agreed_to_terms" name="agreed_to_terms" required>
+            <label for="id_agreed_to_terms">I agree to the sponsorship terms and conditions.</label>
+          </div>
+          <span class="form-error" style="margin-top:-14px;">{{ form.agreed_to_terms.errors.0 }}</span>
+
+          <div class="form-row-full">
+            <button type="submit" class="btn btn-primary full ripple">Submit Sponsorship Request</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- STATISTICS -->
+  <section class="section" style="background:var(--dark);">
+    <div class="container">
+      <p class="eyebrow light center reveal-up">Our Impact</p>
+      <h2 class="section-title light center reveal-up">Numbers That Speak</h2>
+
+      <div class="stats-grid spons-stats-grid">
+        <div class="stat-item reveal-up">
+          <span class="stat-num" data-target="100" data-suffix="+" style="color:var(--white);">0</span>
+          <span class="stat-label" style="color:rgba(255,255,255,.75);">Events Conducted</span>
+        </div>
+        <div class="stat-item reveal-up" data-delay="1">
+          <span class="stat-num" data-target="50" data-suffix="+" style="color:var(--white);">0</span>
+          <span class="stat-label" style="color:rgba(255,255,255,.75);">Corporate Sponsors</span>
+        </div>
+        <div class="stat-item reveal-up" data-delay="2">
+          <span class="stat-num" data-target="25000" data-suffix="+" style="color:var(--white);">0</span>
+          <span class="stat-label" style="color:rgba(255,255,255,.75);">Participants</span>
+        </div>
+        <div class="stat-item reveal-up" data-delay="3">
+          <span class="stat-num" data-target="100000" data-suffix="+" style="color:var(--white);">0</span>
+          <span class="stat-label" style="color:rgba(255,255,255,.75);">Audience Reach</span>
+        </div>
+        <div class="stat-item reveal-up" data-delay="4">
+          <span class="stat-num" data-target="95" data-suffix="%" style="color:var(--white);">0</span>
+          <span class="stat-label" style="color:rgba(255,255,255,.75);">Sponsor Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="container">
+      <p class="eyebrow center reveal-up">Sponsor Voices</p>
+      <h2 class="section-title center reveal-up">What Our Sponsors Say</h2>
+
+      <div class="testimonial-slider reveal-up" id="testimonialSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card glass">
+            <div class="t-rating">★★★★★</div>
+            <p>"Partnering as Title Sponsor gave our brand incredible visibility. The AADHI team made execution effortless from start to finish."</p>
+            <div class="t-person"><strong>Priya Menon</strong><span>Marketing Head, Vitality Health Group</span></div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="t-rating">★★★★★</div>
+            <p>"A professionally run event with genuine audience engagement. Our team enjoyed strong brand recall long after the event ended."</p>
+            <div class="t-person"><strong>Arjun Kapoor</strong><span>Brand Manager, Skyline Bank</span></div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="t-rating">★★★★★</div>
+            <p>"From the discussion meeting to the official announcement, the entire sponsorship process was smooth and transparent."</p>
+            <div class="t-person"><strong>Infosys Corporate Team</strong><span>Corporate Sponsor</span></div>
+          </div>
+
+        </div>
+        <div class="slider-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="sponsor-faq">
+    <div class="container container-narrow">
+      <p class="eyebrow center reveal-up">Need To Know</p>
+      <h2 class="section-title center reveal-up">Frequently Asked Questions</h2>
+
+      <div class="accordion reveal-up" id="sponsorAccordion">
+        <div class="acc-item">
+          <button class="acc-head">How do I become a sponsor?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Fill out the sponsorship request form on this page with your company details and preferred category. Our team will review it and get in touch to take things forward.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Can I customize sponsorship packages?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Yes. While we offer Title, Gold, Silver, and Bronze tiers, we're happy to build a custom package around your specific goals and budget — just select "Custom Sponsorship" in the form.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">How will my brand be promoted?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Depending on your tier, your brand can appear on-stage, on banners, race bibs, digital promotions, social media, press coverage, and official event photography and video.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Do you provide sponsorship agreements?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Yes, every confirmed sponsorship is backed by a formal agreement outlining deliverables, timelines, and payment terms.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Can international companies sponsor?<span class="acc-icon">+</span></button>
+          <div class="acc-body"><p>Absolutely. We welcome sponsors and brand partners from outside India — just include your country in the form and our team will guide you through the process.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="spons-cta">
+    <div class="spons-cta-inner">
+      <h2 class="reveal-up">Ready to Grow Your Brand With AADHI?</h2>
+      <p class="reveal-up" data-delay="1">Join the brands, institutions, and organizations already partnering with us to reach thousands of engaged participants.</p>
+      <div class="spons-cta-actions reveal-up" data-delay="2">
+        <a href="#sponsor-form" class="btn btn-accent ripple">Become a Sponsor</a>
+        <a href="index.html#contact" class="btn btn-outline ripple">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid four">
+    <div class="footer-brand">
+      <a href="index.html#home" class="nav-logo footer-logo">
+        <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="nav-logo-img">
+      </a>
+      <p>Aadhi Events &amp; Entertainments organizes premium marathon events, corporate wellness runs, sports events, and entertainment experiences designed to inspire healthier communities.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#upcoming">Upcoming Events</a>
+      <a href="index.html#completed">Completed Events</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="sponsor.html">Become a Sponsor</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a href="index.html#upcoming">Marathon Events</a>
+      <a href="index.html#upcoming">Corporate Wellness Runs</a>
+      <a href="index.html#highlights">Sports Events</a>
+      <a href="index.html#gallery">Entertainment Events</a>
+      <a href="sponsor.html">Corporate Bookings</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Contact</h4>
+      <p class="footer-contact-line">📧 aadhieventsentertainment@gmail.com</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook" class="social-icon">f</a>
+        <a href="#" aria-label="Instagram" class="social-icon">ig</a>
+        <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+        <a href="#" aria-label="YouTube" class="social-icon">yt</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Aadhi Events &amp; Entertainments. All Rights Reserved.</div>
+</footer>
+
+<script src="{% static 'script.js' %}"></script>
+<script src="{% static 'sponsor.js' %}"></script>
+</body>
+</html>

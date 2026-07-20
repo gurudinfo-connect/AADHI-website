@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | AADHI Events &amp; Entertainments</title>
+<meta name="description" content="Create your AADHI Events & Entertainments account to register for the Bengaluru Corporate Wellness Run.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'media/aadhi-logo-nav.png' %}">
+</head>
+<body class="auth-body">
+
+  <div class="auth-wrap">
+    <a href="index.html" class="auth-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to home
+    </a>
+
+    <div class="auth-card glass">
+      <a href="index.html">
+        <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="auth-logo">
+      </a>
+
+      <h1 class="auth-title">Create your account</h1>
+      <p class="auth-sub">Sign up to register and manage your run</p>
+
+      <form class="auth-form" id="signupForm" novalidate>
+        <div class="form-row">
+          <label for="su-name">Full name</label>
+          <input type="text" id="su-name" name="name" placeholder="Your full name" required>
+          <span class="form-error" data-for="name"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="su-email">Email</label>
+          <input type="email" id="su-email" name="email" placeholder="you@company.com" required>
+          <span class="form-error" data-for="email"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="su-phone">Phone</label>
+          <input type="tel" id="su-phone" name="phone" placeholder="10-digit mobile number" required>
+          <span class="form-error" data-for="phone"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="su-password">Password</label>
+          <input type="password" id="su-password" name="password" placeholder="At least 6 characters" required>
+          <span class="form-error" data-for="password"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="su-confirm">Confirm password</label>
+          <input type="password" id="su-confirm" name="confirm" placeholder="Re-enter your password" required>
+          <span class="form-error" data-for="confirm"></span>
+        </div>
+
+        <label class="auth-terms">
+          <input type="checkbox" name="terms" id="su-terms" required>
+          <span>I agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>.</span>
+        </label>
+        <span class="form-error" data-for="terms"></span>
+
+        <button type="submit" class="btn btn-primary full ripple">Create Account</button>
+        <p class="form-success" id="formSuccess" role="status">Account created successfully — welcome to AADHI!</p>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+    </div>
+  </div>
+
+<script src="{% static 'aadhi-api.js' %}"></script>
+<script src="{% static 'auth.js' %}"></script>
+</body>
+</html>

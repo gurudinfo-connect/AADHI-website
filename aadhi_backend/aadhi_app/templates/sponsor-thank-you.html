@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You for Sponsoring | AADHI Events &amp; Entertainments</title>
+<meta name="description" content="Thank you for your sponsorship request. Our partnerships team at AADHI Events & Entertainments will be in touch shortly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'media/aadhi-logo-nav.png' %}">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Navigation -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-logo">
+      <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="nav-logo-img" width="1088" height="374" decoding="async" fetchpriority="high">
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#upcoming" class="nav-link">Events</a>
+      <a href="sponsor.html" class="nav-link spons-nav-cta">Become a Sponsor</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="signin.html" class="btn btn-primary btn-sm ripple">Login</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section spons-cta" style="min-height:70vh;display:flex;align-items:center;padding-top:calc(var(--nav-h) + 40px);">
+    <div class="spons-cta-inner">
+      <div style="font-size:3.4rem;margin-bottom:18px;">🎉</div>
+      <h2>Thank You for Sponsoring!</h2>
+      <p>Your sponsorship request has been received. Our partnerships team at AADHI Events &amp; Entertainments will review your details and reach out to you shortly to take the next steps.</p>
+      <div class="spons-cta-actions">
+        <a href="index.html#home" class="btn btn-accent ripple">Back to Home</a>
+        <a href="index.html#contact" class="btn btn-outline ripple">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid four">
+    <div class="footer-brand">
+      <a href="index.html#home" class="nav-logo footer-logo">
+        <img src="{% static 'media/aadhi-logo-nav.png' %}" alt="AADHI Events &amp; Entertainments" class="nav-logo-img">
+      </a>
+      <p>Aadhi Events &amp; Entertainments organizes premium marathon events, corporate wellness runs, sports events, and entertainment experiences designed to inspire healthier communities.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#upcoming">Upcoming Events</a>
+      <a href="index.html#completed">Completed Events</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="sponsor.html">Become a Sponsor</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a href="index.html#upcoming">Marathon Events</a>
+      <a href="index.html#upcoming">Corporate Wellness Runs</a>
+      <a href="index.html#highlights">Sports Events</a>
+      <a href="index.html#gallery">Entertainment Events</a>
+      <a href="sponsor.html">Corporate Bookings</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Contact</h4>
+      <p class="footer-contact-line">📧 aadhieventsentertainment@gmail.com</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook" class="social-icon">f</a>
+        <a href="#" aria-label="Instagram" class="social-icon">ig</a>
+        <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+        <a href="#" aria-label="YouTube" class="social-icon">yt</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Aadhi Events &amp; Entertainments. All Rights Reserved.</div>
+</footer>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
